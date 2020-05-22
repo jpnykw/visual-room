@@ -19,9 +19,11 @@
   "dependencies": {
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/three": "^0.103.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-three-fiber": "^4.2.4",
+    "styled-components": "^5.1.0",
     "three": "^0.116.1"
   }
 }

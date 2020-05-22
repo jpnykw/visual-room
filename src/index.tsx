@@ -1,16 +1,26 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Canvas, useFrame } from 'react-three-fiber'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Canvas } from 'react-three-fiber'
+import styled from 'styled-components'
+
+import Box from './components/Box'
 
 const App: React.FC<{}> = () => {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-    </Canvas>,
+    <Container>
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box />
+      </Canvas>
+    </Container>
   )
-};
+}
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+`
 
 ReactDOM.render(<App />, document.querySelector('#app'));
+
