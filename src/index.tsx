@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import { Canvas } from 'react-three-fiber'
 import styled from 'styled-components'
 
+import '../assets/style/main.css'
+
 import Box from './components/Box'
 
 const App: React.FC<{}> = () => {
