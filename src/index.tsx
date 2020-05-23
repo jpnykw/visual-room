@@ -6,10 +6,15 @@ import styled from 'styled-components'
 import '../assets/style/main.css'
 import Box from './components/Box'
 
+import Top from './pages/Top'
+import Player from './pages/Player'
+
 const App: React.FC<{}> = () => {
   return (
     <Container>
-      <Canvas>
+      <Top />
+
+      <Canvas id={"canvas"}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Box />

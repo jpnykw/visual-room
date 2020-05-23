@@ -1,5 +1,4 @@
 // ジャンル選択部分（画面中央配置）の実装
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 
