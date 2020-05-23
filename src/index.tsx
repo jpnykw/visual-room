@@ -16,6 +16,7 @@ import {
 
 import '../assets/style/main.css'
 import Box from './components/Box'
+import Fps from './components/Fps'
 
 import Top from './pages/Top'
 import Player from './pages/Player'
@@ -41,6 +42,8 @@ const App: React.FC<{}> = () => {
             Go to player (debug)
           </Button>
         </Link>
+
+        <Fps fps={60} />
 
         <Switch>
           <Route exact path="/" component={Top}></Route>

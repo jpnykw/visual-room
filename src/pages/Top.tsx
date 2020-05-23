@@ -3,13 +3,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
-import Fps from '../components/Fps'
 import Genre from '../components/Genre'
 
 const Top: React.FC = () => {
   return (
     <div>
-      <Fps fps={60} />
       <Genre id={0} />
       <Connect>connect</Connect>
     </div>
