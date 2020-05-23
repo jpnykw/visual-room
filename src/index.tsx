@@ -1,7 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Canvas } from 'react-three-fiber'
 import styled from 'styled-components'
+import { Canvas } from 'react-three-fiber'
+
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
+
+import {
+  Button
+} from '@material-ui/core';
 
 import '../assets/style/main.css'
 import Box from './components/Box'
@@ -11,15 +22,32 @@ import Player from './pages/Player'
 
 const App: React.FC<{}> = () => {
   return (
-    <Container>
-      <Top />
+    <Router>
+      <Container>
+        <Canvas id={'canvas'}>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Box />
+        </Canvas>
 
-      <Canvas id={"canvas"}>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Box />
-      </Canvas>
-    </Container>
+        <Link to="/">
+          <Button>
+            Go to top (debug)
+          </Button>
+        </Link>
+
+        <Link to="/player">
+          <Button>
+            Go to player (debug)
+          </Button>
+        </Link>
+
+        <Switch>
+          <Route exact path="/" component={Top}></Route>
+          <Route path="/player" component={Player}></Route>
+        </Switch>
+      </Container>
+    </Router>
   )
 }
 

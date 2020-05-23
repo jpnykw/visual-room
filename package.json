@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "ts-loader": "^7.0.4",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
@@ -29,6 +31,7 @@
     "react-three-fiber": "^4.2.4",
     "style-loader": "^1.2.1",
     "styled-components": "^5.1.0",
-    "three": "^0.116.1"
+    "three": "^0.116.1",
+    "webpack-dev-server": "^3.11.0"
   }
 }
