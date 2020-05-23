@@ -17,10 +17,10 @@ const Genre: React.FC<GenreProps> = (props) => {
   return (
     <Content>
       {/* 左右に伸びるグラフィック */}
-      <h2>{label[props.id]}</h2>
+      <Type>{label[props.id]}</Type>
       {/* ジャンルに合わせたアイコンの表示 */}
 
-      <h4>press right or left key to switch</h4>
+      <Navi>press right or left key to switch</Navi>
     </Content>
   )
 }
@@ -31,6 +31,14 @@ const Content = styled(Container)`
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+`
+
+const Type = styled.div`
+  font-size: 60px;
+`
+
+const Navi = styled.div`
+  font-size: 20px;
 `
 
 export default Genre
