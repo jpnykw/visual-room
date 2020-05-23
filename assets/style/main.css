@@ -1,5 +1,11 @@
 body {
   background: #080e0b;
+  overflow: hidden;
+
+  font-family: poppins, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #fff;
 }
 
 #canvas {

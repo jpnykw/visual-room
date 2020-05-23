@@ -11,7 +11,7 @@ interface GenreProps {
 }
 
 const Genre: React.FC<GenreProps> = (props) => {
-  const label: string[] = ['cool'];
+  const label: string[] = ['Cool', 'Kawaii'];
 
   return (
     <Container>
