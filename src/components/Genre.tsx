@@ -3,6 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFire } from '@fortawesome/free-solid-svg-icons'
+
 import {
   Container
 } from '@material-ui/core';
@@ -17,6 +20,7 @@ const Genre: React.FC<GenreProps> = (props) => {
       {/* 左右に伸びるグラフィック */}
       <Type>{props.label}</Type>
       {/* ジャンルに合わせたアイコンの表示 */}
+      <FontAwesomeIcon icon={faFire} />
 
       <Navi>press right or left key to switch</Navi>
     </Content>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
+
 import Genre from '../components/Genre'
 
 const Top: React.FC = () => {
@@ -25,7 +26,7 @@ const Top: React.FC = () => {
 
 const Connect = styled.div`
   position: absolute;
-  bottom: 130px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 30px;
@@ -33,10 +34,10 @@ const Connect = styled.div`
   &:after {
     content: '';
     background: #fff;
-    height: 100px;
+    height: 80px;
     width: 1px;
     position: absolute;
-    bottom: -130px;
+    bottom: -100px;
     left: 50%;
   }
 `
