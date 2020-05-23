@@ -40,7 +40,10 @@ const Type = styled.div`
 `
 
 const Navi = styled.div`
+  color: rgba(255, 255, 255, 0.37);
+  letter-spacing: 3px;
   font-size: 20px;
+  margin-top: 30px;
 `
 
 export default Genre
