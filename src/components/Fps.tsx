@@ -16,8 +16,8 @@ const Fps: React.FC<FpsProps> = (props) => {
 }
 
 const Label = styled.div`
-  font-size: 27px;
-  margin-left: 10px;
+  font-size: 22px;
+  margin: 15px;
 `
 
 export default Fps

@@ -26,10 +26,10 @@ const Top: React.FC = () => {
 
 const Connect = styled.div`
   position: absolute;
-  bottom: 110px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 30px;
+  font-size: 24px;
 
   &:after {
     content: '';
