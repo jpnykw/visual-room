@@ -8,16 +8,14 @@ import {
 } from '@material-ui/core';
 
 interface GenreProps {
-  id: number
+  label: string
 }
 
 const Genre: React.FC<GenreProps> = (props) => {
-  const label: string[] = ['Cool', 'Kawaii'];
-
   return (
     <Content>
       {/* 左右に伸びるグラフィック */}
-      <Type>{label[props.id]}</Type>
+      <Type>{props.label}</Type>
       {/* ジャンルに合わせたアイコンの表示 */}
 
       <Navi>press right or left key to switch</Navi>

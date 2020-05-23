@@ -45,7 +45,7 @@ const App: React.FC<{}> = () => {
   return (
     <Router>
       <Container>
-        <Canvas id={'canvas'}>
+        <Canvas shadowMap id={'canvas'}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <Box />
