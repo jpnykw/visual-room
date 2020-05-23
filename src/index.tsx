@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Canvas } from 'react-three-fiber'
@@ -22,6 +22,27 @@ import Top from './pages/Top'
 import Player from './pages/Player'
 
 const App: React.FC<{}> = () => {
+  const [fps, setFps] = useState(0)
+
+  useEffect(() => {
+    const timer = () => {
+      count += 1
+
+      const now = new Date().getTime()
+      if (now - base >= 1000) {
+        setFps(count)
+        count = 0
+        base = now
+      }
+
+      requestAnimationFrame(timer)
+    }
+
+    let base = new Date().getTime()
+    let count = 0
+    timer()
+  }, [])
+
   return (
     <Router>
       <Container>
@@ -43,7 +64,7 @@ const App: React.FC<{}> = () => {
           </Button>
         </Link>
 
-        <Fps fps={60} />
+        <Fps fps={fps} />
 
         <Switch>
           <Route exact path="/" component={Top}></Route>
