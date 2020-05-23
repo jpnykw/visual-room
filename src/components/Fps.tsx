@@ -8,9 +8,7 @@ interface FpsProps {
 
 const Fps: React.FC<FpsProps> = (props) => {
   return (
-    <div>
-      <h4>{props.fps} FPS</h4>
-    </div>
+    <h4>{props.fps} FPS</h4>
   )
 }
 

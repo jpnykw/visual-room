@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import * as THREE from 'three'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import { Canvas } from 'react-three-fiber'
+import React, { useState, useEffect } from 'react'
+import { Canvas, extend } from 'react-three-fiber'
 
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom'
-
-import {
-  Button
-} from '@material-ui/core';
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Button } from '@material-ui/core'
 
 import '../assets/style/main.css'
 import Box from './components/Box'
@@ -20,6 +13,12 @@ import Fps from './components/Fps'
 
 import Top from './pages/Top'
 import Player from './pages/Player'
+
+// ポストプロセス処理につかいそうなもの
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass'
+extend({ EffectComposer, RenderPass, ShaderPass })
 
 const App: React.FC<{}> = () => {
   const [fps, setFps] = useState(0)
@@ -80,5 +79,5 @@ const Container = styled.div`
   height: 100vh;
 `
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<App />, document.querySelector('#app'))
 

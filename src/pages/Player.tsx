@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom'
 
 const Player: React.FC = () => {
   return (
-    <div>
-    </div>
+    <>
+    </>
   )
 }
 
