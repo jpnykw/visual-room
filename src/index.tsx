@@ -51,6 +51,7 @@ const App: React.FC<{}> = () => {
           <Box />
         </Canvas>
 
+        {/*
         <Link to="/">
           <Button>
             Go to top (debug)
@@ -62,6 +63,7 @@ const App: React.FC<{}> = () => {
             Go to player (debug)
           </Button>
         </Link>
+        */}
 
         <Fps fps={fps} />
 
