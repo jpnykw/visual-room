@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-
+import { Button } from '@material-ui/core'
 import Genre from '../components/Genre'
 
 const Top: React.FC = () => {
@@ -19,7 +20,11 @@ const Top: React.FC = () => {
   return (
     <>
       <Genre label={label[id]}/>
-      <Connect>connect</Connect>
+      <Link to="/player">
+        <Connect>
+          connect
+        </Connect>
+      </Link>
     </>
   )
 }
