@@ -1,8 +1,6 @@
 # Visual Room
 
-:warning: This project is **Work-in-Progress** :warning:
-
-![](https://snipboard.io/NqWG0L.jpg)
+**:warning: This project is Work-in-Progress! :warning:**
 
 # What's the Music Unity 2020
 
@@ -11,4 +9,4 @@
 ![https://www.twitch.tv/videos/622537972](https://snipboard.io/6SQaZo.jpg)
 \- The scene where DJ アリムラ is playing
 
-Special thanks: [https://github.com/hppRC](@hppRC)
+Special thanks: [@hppRC](https://github.com/hppRC)
