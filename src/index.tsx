@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import { Canvas, extend } from 'react-three-fiber'
 
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { CSSTransition } from 'react-transition-group'
 import { Button } from '@material-ui/core'
 
 import '../assets/style/main.css'
@@ -67,10 +68,34 @@ const App: React.FC<{}> = () => {
 
         <Fps fps={fps} />
 
+        {/*
         <Switch>
           <Route exact path="/" component={Top}></Route>
           <Route path="/player" component={Player}></Route>
         </Switch>
+        */}
+
+        <Route exact path="/">
+          <CSSTransition
+            in={true}
+            timeout={300}
+            classNames=""
+            unmountOnExit
+          >
+            <Top />
+          </CSSTransition>
+        </Route>
+
+        <Route path="/player">
+          <CSSTransition
+            in={true}
+            timeout={300}
+            classNames=""
+            unmountOnExit
+          >
+            <Player />
+          </CSSTransition>
+        </Route>
       </Container>
     </Router>
   )
