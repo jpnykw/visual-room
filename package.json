@@ -32,6 +32,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-three-fiber": "^4.2.4",
+    "react-transition-group": "^4.4.1",
     "style-loader": "^1.2.1",
     "styled-components": "^5.1.0",
     "three": "^0.116.1",

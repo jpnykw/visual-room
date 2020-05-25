@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { Button } from '@material-ui/core'
 import Genre from '../components/Genre'
 
 const Top: React.FC = () => {
