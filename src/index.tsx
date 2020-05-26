@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import React, { useState, useEffect } from 'react'
+import React, { useRef, useMemo, useState, useEffect } from 'react'
 import { Canvas, extend } from 'react-three-fiber'
 
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
@@ -20,6 +20,20 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass'
 extend({ EffectComposer, RenderPass, ShaderPass })
+
+// 仮のObject
+const TestObject = (layer: any = 1) => {
+  const ref = useRef()
+  // 本来はレイヤーを受け取る部分をマジックナンバーとする
+  const color = useMemo(() => (layer == 1 ? '#873740' : '#070707'), [layer])
+
+  return (
+    <mesh ref={ref} position={[0, 0, 2]} layers={layer} receiveShadow castShadow>
+      <torusKnotBufferGeometry attach="geometry" args={[0.5, 0.15, 150, 32]} />
+      <meshPhysicalMaterial attach="material" color={color} roughness={1} clearcoat={1} clearcoatRoughness={0.2} />
+    </mesh>
+  )
+}
 
 const App: React.FC<{}> = () => {
   const [fps, setFps] = useState(0)
@@ -48,7 +62,13 @@ const App: React.FC<{}> = () => {
       <Container>
         <Canvas shadowMap id={'canvas'}>
           <ambientLight />
-          <pointLight position={[10, 10, 10]} />
+          <pointLight />
+          <spotLight castShadow intensity={4} angle={Math.PI / 10} position={[10, 10, 10]} shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
+
+          {/* 先にシーンに描画する */}
+          <TestObject />
+
+          {/* Boxをエフェクトの代わりに使用 */}
           <Box />
         </Canvas>
 
